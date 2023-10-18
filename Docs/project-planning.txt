@@ -1,0 +1,11 @@
+MVP :
+1. Create a versatile landing page designed to host multiple placeholder containers for various types of content, including images, news updates, and other components integral to our web application's development.
+2. Build a space news aggregator that fetches the latest news from NASA and other space-related sources, categorizes it, and displays it in an organized way.
+3. Create a section in the website for the user, dedicated to answer all the questions of the user which he might have after exploring other sections of the website like NASA news and other space related content.
+4. Create a contact us page where the user can directly connect with us in case he needs to, this feature will save all the responses from the user in the form of email and we as a developer will get a push notification/email alert once a user sends the contact us form.
+5. Create a dynamic dropdown with names of all the people currently in space and when a name is selected, all the information related to that asutronut will get displayed. 
+6. Create a display block for each planet, with a mouse hover the information of that plannet will get dissplayed.
+
+Not MVP:
+1. Fetch and display the most recent picture of space taken by NASA.
+2.  Space Weather Composnent: real time information Module: We are planning on creating a component for our web application that provides user with real-time space weather information. This module will include data on solar flares, geomagnetic storm forecasts, and aurora visibility predictions.
