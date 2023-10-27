@@ -1,9 +1,10 @@
 
+import Home from '../Home/Home';
 import './App.css';
 
 function App() {
   return (
-    <p>Placeholder for components. Add your components on App.js file to preview.</p>
+   <Home/>
   );
 }
 
