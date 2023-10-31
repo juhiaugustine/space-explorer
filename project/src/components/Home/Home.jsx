@@ -1,10 +1,10 @@
-import './Home.css';
-import blankImage from '../../assets/images/blankImage.png'
-import AstronautsInSpace from '../current_astronauts'
+import "./Home.css";
+import blankImage from "../../assets/images/blankImage.png";
+import AstronautsInSpace from "../current_astronauts";
+import ChatGpt from "../chatgpt_feature";
 function Home() {
   return (
     <div className="background-container">
-
       {/*  Background image */}
       <div className="background-image"></div>
 
@@ -12,10 +12,10 @@ function Home() {
       <div className="image-placeholder">
         <img src={blankImage} alt="Image Placeholder" />
       </div>
-      
-      <AstronautsInSpace/>
+      <ChatGpt />
+
+      <AstronautsInSpace />
     </div>
   );
 }
-
 export default Home;
