@@ -13,9 +13,9 @@ function Home() {
         <img src={blankImage} alt="Image Placeholder" />
       </div>
       <ChatGpt />
+
       <AstronautsInSpace />
     </div>
   );
 }
-
 export default Home;
