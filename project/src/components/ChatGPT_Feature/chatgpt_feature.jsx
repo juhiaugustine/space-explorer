@@ -5,7 +5,6 @@ function ChatGpt() {
 
     const promptInput = document.getElementById("promptInput");
     const generateBtn = document.getElementById("generateBtn");
-    //const stopBtn = document.getElementById("stopBtn");
     const resultText = document.getElementById("resultText");
 
     try {
