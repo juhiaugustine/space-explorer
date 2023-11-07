@@ -1,0 +1,59 @@
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 48px; 
+  }
+  
+  .heading {
+    color: white;
+    font-size: 48px;
+    margin: 10px 0;
+  }
+  
+  .horizontal-scroller {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    padding: 10px 0;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .image-container {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    margin-right: 10px;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .horizontal-scroller {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    padding: 10px 0;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .horizontal-scroller::-webkit-scrollbar {
+    width: 12px; 
+    background-color: transparent;
+  }
+  
+  .horizontal-scroller::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);; 
+    border-radius: 6px;
+  }
+  
+  .horizontal-scroller::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
