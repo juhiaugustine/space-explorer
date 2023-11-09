@@ -14,19 +14,6 @@ import AxiosMock from "axios-mock-adapter";
  * @vitest-environment jsdom
  */
 
-let axiosMock;
-
-// Mocking the API call response before each test
-function setupMock() {
-	axiosMock = new AxiosMock(axios);
-}
-
-// Cleanup after each test
-function cleanupTest() {
-	axiosMock.restore();
-	cleanup();
-}
-
 // basic test to check if vitest works
 describe("example()", () => {
 	it("checks if 5 is 5", () => {
@@ -49,11 +36,22 @@ describe("AstronautsInSpace", () => {
 	});
 });
 
-
 //reference:
 //https://www.npmjs.com/package/axios-mock-adapter
 //https://github.com/radix-ui/primitives/issues/2009
 //https://stackoverflow.com/questions/76288419/how-to-unit-test-a-component-containing-q-select-using-vitest-i-want-to-check-i
+
+let axiosMock;
+
+function setupMock() {
+	axiosMock = new AxiosMock(axios);
+}
+
+function cleanupTest() {
+	axiosMock.restore();
+	cleanup();
+}
+
 describe("AstronautsInSpace component", () => {
 	setupMock();
 
