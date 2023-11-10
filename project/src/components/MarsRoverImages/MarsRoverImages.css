@@ -10,6 +10,13 @@
     font-size: 48px;
     margin: 10px 0;
   }
+
+  .subHeading {
+    color: white;
+    font-size: 24px;
+    text-align: left;
+    margin: 10px 0;
+  }
   
   .horizontal-scroller {
     display: flex;

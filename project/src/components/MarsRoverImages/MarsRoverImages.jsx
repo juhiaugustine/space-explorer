@@ -25,7 +25,8 @@ const MarsRoverImages = () => {
   
     return (
       <div className="gallery">
-        <h1 className="heading">Mars Rover Photos</h1>
+        <h1 className="heading">Space Explorer</h1>
+        <h1 className="subHeading"> Mars Rover Images</h1>
         <div className="horizontal-scroller">
           {images.length > 0 && (
             images.map((image, index) => (

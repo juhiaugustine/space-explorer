@@ -8,7 +8,6 @@ function Home() {
     <div className="background-container">
       {/*  Background image */}
       <div className="background-image"></div>
-
       <MarsRoverImages/>
       {/* Image of the day */}
       <div className="image-placeholder">
