@@ -24,8 +24,9 @@
   justify-content: center;
   align-items: center;
   height: 400px;
-  padding: 16px;
+  padding:60px;
   z-index: 1; /* Puts the image placeholder on top of the background image */
+
 }
 
 /* Styling for the image within the placeholder */

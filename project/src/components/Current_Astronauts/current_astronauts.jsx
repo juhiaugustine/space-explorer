@@ -1,6 +1,8 @@
+import "./current_astronauts.css"
 import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
+
 
 function AstronautsInSpace() {
 	const [astronauts, setAstronaut] = useState([]);
@@ -17,8 +19,9 @@ function AstronautsInSpace() {
 			});
 	}, [astronauts]);
 
-	return (
+		return (
 		<>
+		<div className="main">
 			<div className="astronauts_in_space">
 				<select data-testid="my-dropdown"
 					onChange={(e) => {
@@ -36,12 +39,13 @@ function AstronautsInSpace() {
 						}
 				</select>
 				{selected && (
-					<div>
+					<div className= "display">
 						<h2>Astronaut Information</h2>
 						<p>Name: {selected.name}</p>
 						<p>Craft: {selected.craft}</p>
 					</div>
 				)}
+			</div>
 			</div>
 		</>
 	);
