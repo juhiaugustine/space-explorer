@@ -2,12 +2,13 @@ import "./Home.css";
 import blankImage from "../../assets/images/blankImage.png";
 import AstronautsInSpace from "../Current_Astronauts/current_astronauts";
 import ChatGpt from "../chatgpt_feature/chatgpt_feature";
+import MarsRoverImages from "../MarsRoverImages/MarsRoverImages"
 function Home() {
   return (
     <div className="background-container">
       {/*  Background image */}
       <div className="background-image"></div>
-
+      <MarsRoverImages/>
       {/* Image of the day */}
       <div className="image-placeholder">
         <img src={blankImage} alt="Image Placeholder" />
