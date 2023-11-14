@@ -61,7 +61,7 @@ export default function Contactus() {
 
           {error && Name.length <= 0 && Name.match(numbers) ? (
             <label>
-              <b>*Name is Required /</b>
+              <b>*Name is Required/</b>
             </label>
           ) : (
             ""
