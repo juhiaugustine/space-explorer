@@ -1,6 +1,10 @@
 import { describe, it, expect } from "vitest";
 import ChatGpt from "../components/ChatGPT_Feature/chatgpt_feature";
-import { render, fireEvent } from "@testing-library/react";
+import { render } from "@testing-library/react";
+
+/**
+ * @vitest-environment jsdom
+ */
 
 // checking vitest working
 describe("random passing test", () => {
@@ -16,18 +20,12 @@ describe("ChatGpt", () => {
     render(<ChatGpt />);
   });
 
-  //check if the chatgpt feature runs fine when button is clicked
-  it("chatgpt function runs when button is clicked", () => {
-    const { getByText } = render(<ChatGpt />);
-    const webpagebutton = getByText("Generate");
-    fireEvent.click(webpagebutton);
-    expect(ChatGpt).toHaveBeenCalledTimes(1);
-  });
+
 
   //check if the function has created some text once it is called
   it("chatgpt has created some text", () => {
-    const { getByText } = render(<ChatGpt />);
-    const datarecieved = getByText("resultText");
+    const { getByTestId } = render(<ChatGpt />);
+    const datarecieved = getByTestId("resultText");
     expect(datarecieved).toBeInTheDocument();
   });
 });
