@@ -11,7 +11,7 @@ function Home() {
 
   useEffect(() => {
 		axios
-			.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
+			.get("https://api.nasa.gov/planetary/apod?api_key=TtAYobEewJeiCkJh9FX4k2a07cRLScoCnkbbQHlc")
 			.then((res) => {
 				setImageOfDay(res.data);
 			})
