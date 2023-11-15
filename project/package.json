@@ -33,7 +33,7 @@
   },
   "jest": {
     "setupFilesAfterEnv": [
-      "C:/Users/saura/Desktop/master_courses/Softwere Engineering/project/space-explorer/project/src/setupTests.js"
+      "src/setupTests.js"
     ]
   }
 }
