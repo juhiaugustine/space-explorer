@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './MarsRoverImages.css';
 
+export const API_KEY = 'zfpIuVyYaaKZETKqwLOst2vKrFubJaL4f0usFq7B'
+
 const MarsRoverImages = () => {
     const [images, setImages] = useState([]);
 
