@@ -4,7 +4,7 @@ import AstronautsInSpace from "../Current_Astronauts/current_astronauts";
 import ChatGpt from "../chatgpt_feature/chatgpt_feature";
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+import MarsRoverImages from "../MarsRoverImages/MarsRoverImages"
 
 function Home() {
   const [imageOfDay, setImageOfDay] = useState([]); 
@@ -24,7 +24,7 @@ function Home() {
     <div className="background-container">
       {/*  Background image */}
       <div className="background-image"></div>
-
+      <MarsRoverImages/>
       {/* Image of the day */}
       <div className="image-placeholder">
         <img src={imageOfDay.url} alt={imageOfDay.title} />

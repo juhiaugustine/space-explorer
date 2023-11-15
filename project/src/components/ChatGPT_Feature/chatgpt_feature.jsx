@@ -42,7 +42,7 @@ function ChatGpt() {
       <input type="text" id="promptInput" placeholder="Enter prompt..." />
       <div id="resultContainer">
         <p>Generated Text</p>
-        <p id="resultText"></p>
+        <p data-testid="resultText" id="resultText"></p>
       </div>
       <button id="generateBtn" onClick={generate}>
         Generate
