@@ -47,7 +47,7 @@ function Home() {
             <div className="bottom-components-container">
             <h1 className="subHeading"> Astronomy Picture of the Day </h1>
               <div className="image-placeholder">
-                <img src={blankImage} alt={imageOfDay.title} />
+                <img src={imageOfDay.url} alt={imageOfDay.title} />
               </div>
             </div>
 
