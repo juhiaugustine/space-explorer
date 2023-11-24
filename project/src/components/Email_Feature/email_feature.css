@@ -27,6 +27,7 @@
   margin: 5px;
   border: 2px solid rgb(0, 0, 0);
   border-radius: 5px;
+  font-size: 17px;
 }
 
 .inputmessage {
@@ -36,7 +37,7 @@
 }
 .inputtext {
   width: 500px;
-  font-size: 15px;
+  font-size: 17px;
   border: 2px solid rgb(0, 0, 0);
   border-radius: 5px;
 }
@@ -48,6 +49,7 @@
   font-size: 20px;
   margin: 10px 10px;
   color: black;
+  margin-left: auto;
 }
 
 /* Styling for the fixed background image */

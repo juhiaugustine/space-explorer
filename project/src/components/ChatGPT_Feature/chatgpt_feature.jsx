@@ -39,7 +39,6 @@ function ChatGpt() {
 
   return (
     <>
-      <label className="mysubHeading">Your Question:</label>
       <input
         type="text"
         id="promptInput"

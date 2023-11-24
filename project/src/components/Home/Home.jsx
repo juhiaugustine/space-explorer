@@ -10,21 +10,23 @@ import { Link } from "react-router-dom";
 
 function Home() {
   const centerStyle = {
-    textAlign: 'center', // Aligns the text content to the center
-    color: 'white', // Sets the text color to white
+    textAlign: "center", // Aligns the text content to the center
+    color: "white", // Sets the text color to white
   };
-  const [imageOfDay, setImageOfDay] = useState([]); 
+  const [imageOfDay, setImageOfDay] = useState([]);
 
   useEffect(() => {
-		axios
-			.get("https://api.nasa.gov/planetary/apod?api_key=TtAYobEewJeiCkJh9FX4k2a07cRLScoCnkbbQHlc")
-			.then((res) => {
-				setImageOfDay(res.data);
-			})
-			.catch((err) => {
-				console.error(err);
-			});
-	}, [imageOfDay]);
+    axios
+      .get(
+        "https://api.nasa.gov/planetary/apod?api_key=TtAYobEewJeiCkJh9FX4k2a07cRLScoCnkbbQHlc"
+      )
+      .then((res) => {
+        setImageOfDay(res.data);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }, [imageOfDay]);
 
   return (
     <div className="background-container">
@@ -39,31 +41,32 @@ function Home() {
         {/* Other components */}
         <div className="column">
           <div className="bottom-components">
-
             <div className="bottom-components-container">
+              <h1 className="subHeading"> Ask a Question </h1>
               <ChatGpt />
             </div>
 
             <div className="bottom-components-container">
-            <h1 className="subHeading"> Astronomy Picture of the Day </h1>
+              <h1 className="subHeading"> Astronomy Picture of the Day </h1>
               <div className="image-placeholder">
                 <img src={imageOfDay.url} alt={imageOfDay.title} />
               </div>
             </div>
 
-
             <div className="bottom-components-container">
               <AstronautsInSpace />
             </div>
           </div>
-            
         </div>
-        <p  style={centerStyle}>
-        Have a question? <Link to="/contactus" style={{ color: 'white' }}>Reach out</Link>.
-      </p>
+        <p style={centerStyle}>
+          Have a question?{" "}
+          <Link to="/contactus" style={{ color: "white" }}>
+            Reach out
+          </Link>
+          .
+        </p>
       </div>
     </div>
-     
   );
 }
 export default Home;

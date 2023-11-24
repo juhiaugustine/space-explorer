@@ -47,7 +47,7 @@ export default function Contactus() {
       <form onSubmit={sendemail}>
         <div>
           <label htmlFor="exampleFormControlInput1" className="labletext">
-            Your Name:
+            Name:
           </label>
           <br />
           <input
@@ -60,17 +60,16 @@ export default function Contactus() {
               setFirstName(e.target.value) && setnumber(e.target.value)
             }
           />
-
           {error && Name.length <= 0 && Name.match(numbers) ? (
             <label>
-              <b>*Name is Required/</b>
+              <b>Name is Required/</b>{" "}
             </label>
           ) : (
             ""
           )}
           {error && Name.match(numbers) ? (
             <label>
-              <b>Cannot be a number</b>
+              <b>Name cannot be a number</b>
             </label>
           ) : (
             ""
@@ -78,7 +77,7 @@ export default function Contactus() {
         </div>
         <div>
           <label htmlFor="exampleFormControlInput2" className="labletext">
-            Your Email address:{" "}
+            Email address:{" "}
           </label>
           <br />
           <input
