@@ -40,14 +40,16 @@ export default function Contactus() {
     }
   }
   return (
-    <div className="body">
-      <h2>Contact Us</h2>
-
+    <div className="bottom-components-container-email ">
+      {/* Background image */}
+      <div className="body"></div>
+      <h2 className="heading">Contact Us</h2>
       <form onSubmit={sendemail}>
         <div>
           <label htmlFor="exampleFormControlInput1" className="labletext">
-            Your Name:
+            Name:
           </label>
+          <br />
           <input
             type="text"
             id="exampleFormControlInput1"
@@ -58,10 +60,9 @@ export default function Contactus() {
               setFirstName(e.target.value) && setnumber(e.target.value)
             }
           />
-
           {error && Name.length <= 0 && Name.match(numbers) ? (
             <label>
-              <b>*Name is Required/</b>
+              <b>Name is Required/</b>{" "}
             </label>
           ) : (
             ""
@@ -76,8 +77,9 @@ export default function Contactus() {
         </div>
         <div>
           <label htmlFor="exampleFormControlInput2" className="labletext">
-            Your Email address:{" "}
+            Email address:{" "}
           </label>
+          <br />
           <input
             type="email"
             id="exampleFormControlInput2"
@@ -99,6 +101,7 @@ export default function Contactus() {
           <label htmlFor="exampleFormControlTextarea1" className="labletext">
             Subject:{" "}
           </label>
+          <br />
           <input
             type="text"
             id="exampleFormControlTextarea1"
@@ -119,12 +122,14 @@ export default function Contactus() {
           <label htmlFor="exampleFormControlTextarea2" className="labletext">
             Your Message:{" "}
           </label>
+          <br />
           <textarea
             id="exampleFormControlTextarea2"
-            rows="4"
-            cols="40"
+            rows="10"
+            cols="50"
             placeholder="Enter your Message"
             name="user_message"
+            className="inputtext"
             onChange={(e) => setmessage(e.target.value)}
           ></textarea>
           {error && umessage.length <= 0 ? (

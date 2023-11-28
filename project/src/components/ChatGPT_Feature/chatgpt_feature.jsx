@@ -1,3 +1,4 @@
+import "./chatgpt_feature.css";
 function ChatGpt() {
   const generate = async () => {
     const API_URL = "https://api.openai.com/v1/chat/completions";
@@ -38,14 +39,18 @@ function ChatGpt() {
 
   return (
     <>
-      <label>Your Question:</label>
-      <input type="text" id="promptInput" placeholder="Enter prompt..." />
+      <input
+        type="text"
+        id="promptInput"
+        className="inpt"
+        placeholder="Enter a Question"
+        required
+      />
       <div id="resultContainer">
-        <p>Generated Text</p>
-        <p data-testid="resultText" id="resultText"></p>
+        <p data-testid="resultText" className="resultbg" id="resultText"></p>
       </div>
-      <button id="generateBtn" onClick={generate}>
-        Generate
+      <button id="generateBtn" onClick={generate} className="btn">
+        Result
       </button>
     </>
   );
