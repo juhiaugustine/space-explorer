@@ -69,6 +69,7 @@ body {
   font-size: 24px;
   margin: 10px 0;
   text-align: center;
+
 }
 
 /* Styling for the image details */
@@ -93,4 +94,5 @@ body {
 /* Show the image details when isHovered is true */
 .image-placeholder:hover .image-details {
   opacity: 1;
+
 }
