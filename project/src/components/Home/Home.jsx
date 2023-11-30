@@ -10,12 +10,10 @@ import { Link } from "react-router-dom";
 
 function Home() {
   const centerStyle = {
-
     textAlign: "center", // Aligns the text content to the center
     color: "white", // Sets the text color to white
   };
   const [imageOfDay, setImageOfDay] = useState([]);
-
 
   useEffect(() => {
     axios
@@ -49,20 +47,17 @@ function Home() {
             </div>
 
             <div className="bottom-components-container">
-            <h1 className="subHeading"> Astronomy Picture of the Day </h1>
+              <h1 className="subHeading"> Astronomy Picture of the Day </h1>
               <div className="image-placeholder">
                 <img src={imageOfDay.url} alt={imageOfDay.title} />
               </div>
             </div>
 
-
-
-
             <div className="bottom-components-container">
+              <h1 className="subHeading"> Astronauts in Space </h1>
               <AstronautsInSpace />
             </div>
           </div>
-
         </div>
         <p style={centerStyle}>
           Have a question?{" "}
@@ -71,10 +66,8 @@ function Home() {
           </Link>
           .
         </p>
-
       </div>
     </div>
-     
   );
 }
 export default Home;

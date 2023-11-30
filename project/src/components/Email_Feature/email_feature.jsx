@@ -43,7 +43,7 @@ export default function Contactus() {
     <div className="bottom-components-container-email ">
       {/* Background image */}
       <div className="body"></div>
-      <h2 className="heading">Contact Us</h2>
+      <h2 className="heading2">Contact Us</h2>
       <form onSubmit={sendemail}>
         <div>
           <label htmlFor="exampleFormControlInput1" className="labletext">

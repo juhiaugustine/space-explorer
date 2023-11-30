@@ -15,10 +15,12 @@
   font-size: 25px;
 }
 
-.heading {
+.heading2 {
   color: black;
   text-align: center;
   text-size-adjust: 20px;
+  font-size: 48px;
+  margin: 10px 0;
 }
 
 .input {
