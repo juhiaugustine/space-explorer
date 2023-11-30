@@ -69,4 +69,30 @@ body {
   font-size: 24px;
   margin: 10px 0;
   text-align: center;
+
+}
+
+/* Styling for the image details */
+.image-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Initially invisible */
+  transition: opacity 0.3s ease; /* Add a smooth transition effect */
+}
+
+/* Show the image details when isHovered is true */
+.image-placeholder:hover .image-details {
+  opacity: 1;
+
 }

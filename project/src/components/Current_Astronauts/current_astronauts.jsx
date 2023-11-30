@@ -7,6 +7,7 @@ import { useEffect } from "react";
 function AstronautsInSpace() {
 	const [astronauts, setAstronaut] = useState([]);
 	const [selected, setSelected] = useState();
+	const [wikiUrl, setWikiUrl] = useState(null);
 
 	useEffect(() => {
 		axios
@@ -17,7 +18,16 @@ function AstronautsInSpace() {
 			.catch((err) => {
 				console.error(err);
 			});
-	}, [astronauts]);
+	}, []);
+
+	useEffect(() => {
+    if (selected) {
+        const astronautName = encodeURIComponent(selected.name);
+        const apiUrl = `https://en.wikipedia.org/wiki/${astronautName}`;
+        setWikiUrl(apiUrl);
+    }
+}, [selected]);
+
 
 		return (
 		<>
@@ -43,6 +53,13 @@ function AstronautsInSpace() {
 						<h2>Astronaut Information</h2>
 						<p>Name: {selected.name}</p>
 						<p>Craft: {selected.craft}</p>
+						<div>
+						{wikiUrl && (
+								<>
+									<a href={wikiUrl}>Visit Wikipedia Page</a>
+								</>
+							)}
+							</div>
 					</div>
 				)}
 			</div>
